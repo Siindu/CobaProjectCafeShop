@@ -13,25 +13,70 @@ body{
     box-shadow: 0px 2px 10px;
 }
 h3{
+    text-align: center;
     color: rgb(65, 35, 13);
     font-size: 30px;
     font-family: Arvo;
     padding: 10px;   
     margin: 0;
 }
+#homeLogo{
+    align-items: center;
+}
+
+#stylePages{
+    font-family: Arvo;
+    text-align: center;
+}
+#stylePages a{
+    text-decoration: solid;
+    color: black;
+    padding: 60px 15px 1px;
+    display: inline-block;
+}
+#stylePages a.active{
+    color: rgb(65, 35, 13);
+    font-weight: bold;
+}
+
 .judul{
+    text-align: center;
     font-family: Nunito;
-    padding: 55px 40px 1px;
+    padding: 1px 40px 1px;
 }
-#lirik{
-    padding: 1px 60px;
-}
-pre{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-a:hover{
+.judul > a:hover{
     color: rgb(31, 153, 254);
 }
-a:active{
+.judul > a:active{
     color: rgb(25, 0, 255);
+} 
+
+#lirik{
+    text-align: center;
+    padding: 1px 60px;
+}
+#mainLirik{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#mainPages{
+    font-family: monospace;
+    text-align: center;
+}
+#mainPages a{
+    text-decoration: none;
+    color: black;
+    padding: 8px 15px;
+    display: inline-block;
+}
+#mainPages a.active{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(65, 35, 13);
+    border-radius: 5px;
+}
+#mainPages a:hover:not(.active){
+    font-weight: bold;
+    background-color: bisque;
+    border-radius: 5px;
 }
