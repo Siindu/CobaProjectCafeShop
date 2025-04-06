@@ -21,7 +21,14 @@ h3{
     margin: 0;
 }
 #homeLogo{
-    align-items: center;
+    align-items: top;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+#Titik3Logo{
+    align-items: left;
+    display: none;
 }
 
 #stylePages{
