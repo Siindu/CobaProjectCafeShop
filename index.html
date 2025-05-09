@@ -3,80 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lagi belajar nich's</title>
+
+    <!-- PRIMARY META TAGS -->
+
+    <title>Rasa Kopi</title>
+    <meta name="title" content="Rasa Kopi">
+    <meta name="description" content="Kopi terbaik di Bali">
+
+    <!-- FAVICON -->
+
+    <link rel="shortcut icon" href="Media/LogoRasaKopi.png" type="image/svg+xml">
+
+    <!-- GOOGLE FONT -->
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
     <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- PRELOAD IMAGES -->
+
+    <link rel="preload" as="image" href="Media/hero-slider-1.jpg">
+    <link rel="preload" as="image" href="Media/hero-slider-2.jpg">
+    <link rel="preload" as="image" href="Media/hero-slider-3.jpg">
 </head>
 <body>
-    <header>
-        <div class="header" id="box1">
-            <h3>Guns N' Roses</h3>
-            <div id="box2">
-                <img src="LogoHome.png" alt="" id="HomeLogo" width="30">
-                <img src="Source/LogoGarisTiga.png" alt="" id="Titik3Logo" width="50">
+
+    <!-- PRELOADER -->
+
+    <div class="preload" data-preload>
+        <div class="circle"></div>
+        <p class="text">Rasa Kopi</p>
+    </div>
+
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+        <div class="container">
+
+            <address class="topbar-item">
+                <div class="icon">
+                    <ion-icon name="location-outline" aria-hidden="ture" ></ion-icon>
+                </div>
+
+                <span class="span">
+                    Rasa Kopi, Sukawati v Penestan, Gianyar, Bali
+                </span>
+            </address>
+
+            <div class="separator"></div>
+
+            <div class="topbar-item item-2">
+                <div class="icon">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">
+                    Buka : 10.00 am - 11.59 pm
+                </span>
             </div>
+
+            <a href="tel:+628789012345" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">+62 878 901 2345</span>
+            </a>
+
+            <div class="separator"></div>
+
+            <a href="mailto:rasakopi@gmail.com" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">rasakopi@gmail.com</span>
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="Media/LogoRasaKopi.png" width="160" height="50" alt="Rasa Kopi - Home">
+            </a>
+
+            <nav class="navbar active" data-navbar>
+
+                <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="logo">
+                    <img src="Media/LogoRasaKopi.png" width="160" height="50" alt="Rasa Kopi - Home">
+                </a>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Menu</span>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Kontak</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="text-center">
+                    <p class="headline-1 navnar-title">Kunjungi</p>
+
+                    <address class="body-4">
+                        Rasa Kopi, Sukawati v Penestan, Gianyar, Bali
+                    </address>
+
+                    <p class="body-4 navbar-text">Buka : 10.00 am - 11.59 pm</p>
+
+                    <a href="mailto:rasakopi@gmail.com" class="body-4 sidebar-link">rasakopi@gmail.com</a>
+
+                    <div class="separator"></div>
+
+                    <p class="contact-label">Pesan Meja</p>
+
+                    <a href="tel:+628789012345" class="body-1 contact-number hover-underline">+62 878 901 2345</a>
+                </div>
+
+            </nav>
+
+            <a href="#" class="btn btn-secondary">
+                <span class="text text-2" aria-hidden="true">Pesan Meja</span>
+            </a>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+
+            <div class="overlay" dara-nav-toggler data-overlay></div>
+
         </div>
     </header>
-    <main>
-        <div class="pages" id="stylePages">
-            <a href="index.html" class="active">_________</a>
-            <a href="pages1.html">_________</a>
-            <a href="pages2.html">_________</a>
-        </div>
-        <div class="judul">
-            <div>
-                <h1>Knockin' on Heaven's Door</h1>
-                <h4 class="tulisan" id="penerbit">Song of Guns N' Roses</h4>
-            </div>
-            <a href="https://www.youtube.com/watch?v=k04tX2fvh0o">
-                <img src="Source/GunNRose.jpg" alt="Foto Gun N, Rose" width="300">
-            </a>  
-            <br>
-            <a href="https://en.wikipedia.org/wiki/Guns_N%27_Roses" target="_blank" title="Guns N' Roses details">Click here</a>
-            <br><br>
-            <hr> 
-        </div>
-        <div class="isi">
-            <h4 class="tulisan" id="lirik">Lyrics:</h4>
-            <p id="mainLirik">
-                Mama take this badge from me <br>
-                I can't use it anymore <br>
-                It's getting dark too dark to see <br><br>
-                Feels like I'm knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br><br>
-                Mama put my guns in the ground <br>
-                I can't shoot them anymore <br>
-                That cold black cloud is comin' down <br><br>
-                Feels like I'm knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br><br>
-                "You just better start sniffin' your own rank subjugation jack <br>
-                'Cause it's just you against your tattered libido <br>
-                The bank and the mortician, forever man <br>
-                And it wouldn't be luck if you could get out of life alive" <br><br>
-                Knock-knock-knockin' on Heaven's door <br>
-                (Knock-knock-knockin' on Heaven's door) <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                (Knock-knock-knockin' on Heaven's door) <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                (Knock-knock-knockin' on Heaven's door) <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                (Knock-knock-knockin' on Heaven's door) <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-                Knock-knock-knockin' on Heaven's door <br>
-            </p>
-        </div>
-        <div class="pages" id="mainPages">
-            <a href="index.html" class="active">1</a>
-            <a href="pages1.html">2</a>
-            <a href="pages2.html">3</a>
-        </div>
-    </main>
+
+
+    <!-- JAVA SCRIPT -->
+
+    <script src="Java Script/script.js"></script>
+
+    <!-- ION ICON LINK -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
