@@ -66,12 +66,12 @@ window.addEventListener("scroll", function () {
 // HERO SLIDER 
 
 const heroSlider = document.querySelector ("[data-hero-slider]");
-const heroSliderItems = document.querySelectorAll ("[data-hero-slider-item]");
-const heroSliderPrevBtn = document.querySelector ("[data-prev-btn]");
-const heroSliderNextBtn = document.querySelector ("[data-next-btn]");
+const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
+const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
+const heroSliderNextBtn = document.querySelector("[data-next-btn]");
 
 let currentSliderPos = 0;
-letlastActiveSliderItem = heroSliderItems[0];
+let lastActiveSliderItem = heroSliderItems[0];
 
 const updateSliderPos = function () {
     lastActiveSliderItem.classList.remove("active");
@@ -80,45 +80,42 @@ const updateSliderPos = function () {
 }
 
 const slideNext = function () {
-    if ( currentSliderPos >= heroSliderItems.length -1 ) {
+    if (currentSliderPos >= heroSliderItems.length -1) {
         currentSliderPos = 0;
     }
     else {
         currentSliderPos++;
     }
-
     updateSliderPos();
 }
 
 heroSliderNextBtn.addEventListener("click", slideNext);
 
 const slidePrev = function () {
-    if ( currentSliderPos <= 0 ) {
-        currentSliderPos = heroSliderItems.length -1;
+    if (currentSliderPos <= 0){
+        currentSliderPos = heroSliderItems.length - 1;
     }
     else {
         currentSliderPos--;
     }
-
     updateSliderPos();
 }
 
 heroSliderPrevBtn.addEventListener("click", slidePrev);
 
-//AutoSlide
-
+//  Auto Slide
 let autoSlideInterval;
 
 const autoSlide = function () {
-    autoSlideInterval = setInterval ( function () {
-        slideNext();
-    }, 7000 );
+    autoSlideInterval = setInterval(function () {
+        slideNext(); 
+    }, 7000);
 }
 
-addEventOnElements( [heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
-    clearInterval(autoSlideInterval);
-} );
+addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
+    clearInterval(autoSlideInterval);  
+});
 
-addEventOnElements( [heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide );
+addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
 
 window.addEventListener("load", autoSlide);
